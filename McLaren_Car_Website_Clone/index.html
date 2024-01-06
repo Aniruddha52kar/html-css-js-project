@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>McLAREN | Sports Car Website Landing Page</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
 <header>
 
     <span class="year">2018 - 2023</span>
-    <a href="/" class="logo"><img src="/img/logo.png" alt="logo" /></a>
+    <a href="/" class="logo"><img src="./img/logo.png" alt="logo" /></a>
     <a href="#" class="menu" onclick="toggleMenu();"></a>
 
 </header>
@@ -33,31 +34,31 @@
     <!-- car-video -->
 
     <div class="bg-video-list">
-        <video class="bg-video maclaren-1 active"
+        <video class="bg-video mclaren-1 active"
          src="./videos/mclaren-1.mp4"
          autoplay
          loop
          muted
          ></video>
-         <video class="bg-video maclaren-2"
+         <video class="bg-video mclaren-2"
          src="./videos/mclaren-2.mp4"
          autoplay
          loop
          muted
          ></video>
-         <video class="bg-video maclaren-3"
+         <video class="bg-video mclaren-3"
          src="./videos/mclaren-3.mp4"
          autoplay
          loop
          muted
          ></video>
-         <video class="bg-video maclaren-4"
+         <video class="bg-video mclaren-4"
          src="./videos/mclaren-4.mp4"
          autoplay
          loop
          muted
          ></video>
-         <video class="bg-video maclaren-5"
+         <video class="bg-video mclaren-5"
          src="./videos/mclaren-5.mp4"
          autoplay
          loop
@@ -70,6 +71,9 @@
     <!-- Car Name and Model -->
 
     <div class="content">
+        <!-- Video play and pause button  -->
+        
+       
         <h1>McLAREN</h1>
         <h3 class="model mclaren-1 active">765LT SPIDER</h3>
         <h3 class="model mclaren-2" style="color: #92ff00;">ARTURA</h3>
@@ -84,6 +88,14 @@
 
     </div>
 
+    <!-- Video Play and Pause Btn  -->
+    <a href="# " class="pause active" onclick="pauseVideo();">
+        <i class="bi bi-pause-circle"></i>
+    </a>
+    <a href="#" class="play" onclick="playVideo();">
+        <i class="bi bi-play-circle"></i>
+    </a>
+
     <!-- Box Screen  -->
     <div class="screen">
         <div class="shadow"></div>
@@ -93,6 +105,8 @@
                 <!-- Insert the screen video --> 
                 <!-- video data mapping  -->
                 <!-- match the video name with the class name -->
+                <!-- here, i only make one screen dyanmaic due to the limitation of video
+                but you can make all four screen dynamic, if you have more video it will be really cool.  -->
                 
                 <video class="trailer mclaren-1 screen-video active" 
                 src="./videos/mclaren-1.mp4"
@@ -112,13 +126,13 @@
                  loop
                  muted
                 ></video>
-                <video class="trailer maclaren-4 screen-video" 
+                <video class="trailer mclaren-4 screen-video" 
                 src="./videos/mclaren-4.mp4"
                  autoplay
                  loop
                  muted
                 ></video>
-                <video class="trailer maclaren-5 screen-video" 
+                <video class="trailer mclaren-5 screen-video" 
                 src="./videos/mclaren-5.mp4"
                  autoplay
                  loop
@@ -159,23 +173,23 @@
     <div class="gallery">
 
         <div class="carousel">
-            <a class="carousel-item" href="#">
+            <a class="carousel-item" href="#" onclick="changeVideo('mclaren-1')">
                 <img src="./img/mclaren-1.jpg" alt="">
                 <h4>765LT SPIDER</h4>
             </a>
-            <a class="carousel-item" href="#">
+            <a class="carousel-item" href="#" onclick="changeVideo('mclaren-2')">
                 <img src="./img/mclaren-2.jpg" alt="">
                 <h4 style="color: #92ff00;">ARTURA</h4>
             </a>
-            <a class="carousel-item" href="#">
+            <a class="carousel-item" href="#" onclick="changeVideo('mclaren-3');">
                 <img src="./img/mclaren-3.jpeg" alt="">
                 <h4 style="color: #ff0015;">750S</h4>
             </a>
-            <a class="carousel-item" href="#">
+            <a class="carousel-item" href="#" onclick="changeVideo('mclaren-4');">
                 <img src="./img/mclaren-4.jpeg" alt="">
                 <h4 style="color: #ff2e00;">765LT</h4>
             </a>
-            <a class="carousel-item" href="#">
+            <a class="carousel-item" href="#" onclick="changeVideo('mclaren-5');">
                 <img src="./img/mclaren-5.jpeg" alt="">
                 <h4>750S SPIDER</h4>
             </a>
@@ -184,6 +198,14 @@
     
 </div>
 
+<!-- Social Media Icon  -->
+<ul class="sci">
+   <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+   <li><a href="#"></a><i class="bi bi-instagram"></i></li>
+   <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+  
+    
+</ul>
 <script
   src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="script.js"></script>
